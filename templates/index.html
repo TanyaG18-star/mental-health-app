@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MindCare - Student Mental Health</title>
-  <link rel="stylesheet" href="../static/style.css">
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Crisis Bar -->
-  <div class="crisis-bar">
-    <p><i class="fa-solid fa-triangle-exclamation"></i> Need urgent help? 
-      <a href="#">Call Crisis Helpline</a>
+  <div class="crisis-bar" role="alert">
+    <p><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+      Need urgent help?
+      <a href="tel:1800123456">Call Crisis Helpline</a>
     </p>
   </div>
 
   <!-- Navbar -->
   <header>
-    <nav class="navbar container">
-      <div class="logo"><i class="fa-solid fa-heart-pulse"></i> MindCare</div>
+    <nav class="navbar container" aria-label="Main navigation">
+      <div class="logo"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> MindCare</div>
       <ul class="nav-links">
         <li><a href="#">AI Chat</a></li>
         <li><a href="#">Check-in</a></li>
@@ -30,7 +29,7 @@
         <li><a href="#">Resources</a></li>
         <li><a href="#">Community</a></li>
       </ul>
-      <a href="#" class="btn btn-small">Login</a>
+      <a href="{{ url_for('login') }}" class="btn btn-small"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
     </nav>
   </header>
 
@@ -49,22 +48,22 @@
   <!-- Feature Sections -->
   <section class="features container">
     <div class="card">
-      <i class="fa-solid fa-robot"></i>
+      <i class="fa-solid fa-robot" aria-hidden="true"></i>
       <h3>AI Support</h3>
       <p>Chat with our AI guide for coping strategies and referrals.</p>
     </div>
     <div class="card">
-      <i class="fa-solid fa-user-md"></i>
+      <i class="fa-solid fa-user-md" aria-hidden="true"></i>
       <h3>Counseling</h3>
       <p>Book confidential sessions with trained professionals.</p>
     </div>
     <div class="card">
-      <i class="fa-solid fa-book-open-reader"></i>
+      <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
       <h3>Resource Library</h3>
       <p>Explore videos, guides, and self-help content anytime.</p>
     </div>
     <div class="card">
-      <i class="fa-solid fa-users"></i>
+      <i class="fa-solid fa-users" aria-hidden="true"></i>
       <h3>Peer Support</h3>
       <p>Connect with supportive student volunteers and peers.</p>
     </div>
@@ -74,11 +73,9 @@
   <footer>
     <div class="container footer-content">
       <p>&copy; 2025 MindCare | Dept. of Student Welfare</p>
-      <p><i class="fa-solid fa-phone"></i> Helpline: 1800-123-456</p>
+      <p><i class="fa-solid fa-phone" aria-hidden="true"></i> Helpline: 1800-123-456</p>
     </div>
   </footer>
 
 </body>
 </html>
-
-

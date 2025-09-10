@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - MindCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar container">
+      <div class="logo"><i class="fa-solid fa-heart-pulse"></i> MindCare</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        <li><a href="#">Manage Users</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+      <a href="{{ url_for('logout') }}" class="btn btn-small">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard Hero -->
+  <section class="hero container">
+    <h1>Welcome, <span>{{ session['user'] }}</span> 👋</h1>
+    <p>This is your admin dashboard. Manage users, view reports, and control system settings.</p>
+  </section>
+
+  <!-- Dashboard Features -->
+  <section class="features container">
+    <div class="card">
+      <i class="fa-solid fa-users"></i>
+      <h3>Manage Users</h3>
+      <p>View, add, or remove student accounts and moderators.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Reports & Analytics</h3>
+      <p>Track usage statistics, mental health trends, and counselor activity.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-cogs"></i>
+      <h3>System Settings</h3>
+      <p>Configure app settings, update resources, and customize content.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Security</h3>
+      <p>Manage roles, permissions, and keep user data safe.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 MindCare | Dept. of Student Welfare</p>
+      <p><i class="fa-solid fa-phone"></i> Helpline: 1800-123-456</p>
+    </div>
+  </footer>
+
+</body>
+</html>
